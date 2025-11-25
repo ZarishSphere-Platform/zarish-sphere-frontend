@@ -1,0 +1,23 @@
+{
+  "name": "zarish-sphere-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "src/doctor-portal",
+    "src/patient-portal",
+    "src/lab-portal",
+    "src/pharmacy-portal",
+    "src/admin-dashboard",
+    "src/shared"
+  ],
+  "scripts": {
+    "start": "concurrently \"npm:start:*\"",
+    "build": "concurrently \"npm:build:*\"",
+    "test": "concurrently \"npm:test:*\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "typescript": "^5.0.0",
+    "vite": "^4.0.0"
+  }
+}
