@@ -1,0 +1,101 @@
+site_name: ZarishSphere Platform Documentation
+site_description: Complete ERP/EHR Platform with FHIR Compliance
+site_author: ZarishSphere Platform
+site_url: https://zarishsphere-platform.github.io/zarish-sphere-frontend/
+
+repo_name: ZarishSphere-Platform/zarish-sphere-frontend
+repo_url: https://github.com/ZarishSphere-Platform/zarish-sphere-frontend
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - mermaid2
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Architecture:
+      - Overview: architecture/overview.md
+      - Microservices: architecture/microservices.md
+      - Data Flow: architecture/dataflow.md
+  - Modules:
+      - Financial (zarish-fin): modules/zarish-fin.md
+      - HR (zarish-hra): modules/zarish-hra.md
+      - Hospital (zarish-his): modules/zarish-his.md
+      - API Gateway (zarish-connect): modules/zarish-connect.md
+      - FHIR Core (zarish-sphere): modules/zarish-sphere.md
+      - Authentication (zarish-access): modules/zarish-access.md
+      - Terminology (zarish-terms): modules/zarish-terms.md
+      - Forms (zarish-forms): modules/zarish-forms.md
+      - Geography (zarish-geo): modules/zarish-geo.md
+      - Support (zarish-support): modules/zarish-support.md
+      - Management (zarish-management): modules/zarish-management.md
+      - Wiki (zarish-wiki): modules/zarish-wiki.md
+      - Analytics (zarish-insight): modules/zarish-insight.md
+      - Logistics (zarish-log): modules/zarish-log.md
+  - Frontend:
+      - Overview: frontend/overview.md
+      - Doctor Portal: frontend/doctor-portal.md
+      - Patient Portal: frontend/patient-portal.md
+      - Lab Portal: frontend/lab-portal.md
+      - Pharmacy Portal: frontend/pharmacy-portal.md
+      - Admin Dashboard: frontend/admin-dashboard.md
+  - Deployment:
+      - Quick Start: deployment/quickstart.md
+      - Docker: deployment/docker.md
+      - Kubernetes: deployment/kubernetes.md
+  - API Reference:
+      - Financial API: api/financial.md
+      - HR API: api/hr.md
+      - Hospital API: api/hospital.md
+  - Contributing: contributing.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ZarishSphere-Platform
