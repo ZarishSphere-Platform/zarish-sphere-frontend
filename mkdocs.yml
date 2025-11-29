@@ -93,6 +93,8 @@ nav:
       - Financial API: api/financial.md
       - HR API: api/hr.md
       - Hospital API: api/hospital.md
+  - FHIR Dictionaries:
+      - Complete Metadata: fhir-dictionaries.md
   - Contributing: contributing.md
 
 extra:
